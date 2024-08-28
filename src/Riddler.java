@@ -83,11 +83,7 @@ public class Riddler {
         {
             // Tried to convert the special characters to bytes and then to ints and then finally to chars...
             // this did not work lol.
-            byte[] arrayOfBites = (encrypted.substring(i, i + 1).getBytes());
-            for (byte b : arrayOfBites)
-            {
-                decrypted += (char) Math.abs(b);
-            }
+            decrypted += (char) (encrypted.charAt(i) - '✀' + 'A');
         }
         System.out.println(decrypted);
 
