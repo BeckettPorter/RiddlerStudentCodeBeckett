@@ -65,9 +65,7 @@ public class Riddler {
             // I found this version of the parseInt method online, and it converts binary to the ascii decimal value.
             int num = Integer.parseInt(encrypted.substring(i, i + 8), 2);
 
-            String str = String.valueOf(num);
-
-            decrypted += (char) Integer.parseInt(str);
+            decrypted += (char) num;
         }
         // TODO: Complete the decryptThree() function.
 
